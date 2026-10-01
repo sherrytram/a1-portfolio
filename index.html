@@ -10,16 +10,88 @@ EMAIL: smtram@uci.edu
   <meta charset="utf-8">
   <meta name="author" content="Sherry Tram">
   <meta name="description" content="Sherry Tram's INF 133 A1 Portfolio">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&family=Gaegu:wght@400;700&display=swap">
+
   <link rel="stylesheet" href="mystyle.css">
-   <!-- you would also link to Bootstrap here! -->
+   
   <title>sherry tram</title>
 </head>
-<body>
+<body class="page-home">
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="img/brocmob.png" alt="Home: character logo">
+    </a>
+
+    <nav aria-label="main">
+      <ul>
+        <li>
+            <a href="index.html" aria-current="page">
+                <img src="img/homefolder.png" alt="">
+                <span>home!</span>
+            </a>
+        </li>
+        <li>
+            <a href="portfolio.html">
+                <img src="img/photofolder.png" alt="">
+                <span>projects!</span>
+            </a>
+        </li>
+        <li>
+            <a href="about.html">
+                <img src="img/aboutfolder.png" alt="">
+                <span>about!</span>
+            </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <img class="hero-img" src="img/aboutmob.png" alt="Hand-drawn character waving hello">
+      <div class="hero-text">
+          <h1>ello! i'm sherry &#9786;</h1>
+          <p>ello... welcome</p>
+          <p>Pick a folder below to explore what I've been creating or to learn more about me!</p>
+      </div>
+    </section>
+
+    <section class="directory" aria-labelledby="explore">
+      <h2 id="explore">where to next?</h2>
+        <ul class="dir-grid">
+          <li>
+              <a class="dir-card" href="projects.html">
+                  <img src="img/photofolder.png" alt="">
+                  <span class="btn">portfolio!</span>
+                  <span class="hovertext">View my art &amp; projects!</span>
+              </a>
+          </li>
+          <li>
+              <a class="dir-card" href="about.html">
+                  <img src="img/aboutfolder.png" alt="">
+                  <span class="btn">about!</span>
+                  <span class="hovertext">Learn more about my me!</span>
+              </a>
+          </li>
+        </ul>
+    </section>
+  </main>
+
+
   <p>
     <a href="http://validator.w3.org/check?uri=referer">
        W3C validator
     </a>
   </p>
+
+  <footer class="site-footer">
+        <p>&copy; 2026 Sherry &middot;
+            <a href="https://github.com/sherrytram">GitHub</a> &middot;
+            <a href="https://www.linkedin.com/in/sherry-tram">LinkedIn</a>
+        </p>
+    </footer>
 </body>
 </html>
