@@ -1,0 +1,183 @@
+/* ==========================================================
+   VARIABLES & BASE DESIGN
+   ========================================================== */
+
+:root {
+    --cream: #FAF8F0;
+    --brown: #794F41;
+    --green: #2F7A55;
+    --lightgreen: #4B966D;
+
+    --shadow-light: rgb(223, 223, 223);
+    --shadow-mid: rgb(223, 223, 223);
+    --shadow-dark: rgb(223, 223, 223);
+
+    --bg-width: 1200px;
+    --bg-top-offset: 40px;     
+    --icon: clamp(64px, 18vw, 100px);
+
+    --font-display: "Gaegu", "Comic Sans MS", cursive;
+    --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", Arial, sans-serif;
+}
+
+*, *::before, *::after {box-sizing: border-box; }
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--font-body);
+    background-color: var(--cream);
+
+    background-image: url("img/bg_bottom.png");
+    background-size: min(var(--bg-width), 100%) auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+main { 
+    flex: 1;
+    width: 100%;
+    padding: 0 max(1rem, calc((100% - 1100px) / 2));
+
+    background-image: url("img/bg_top.png");
+    background-size: min(var(--bg-width), 100%) auto;
+    background-position: center var(--bg-top-offset);
+    background-repeat: no-repeat;
+}
+
+h1 { 
+    font-family: var(--font-display); 
+    font-size: clamp(28px, 6vw, 35px); 
+    color: var(--brown); 
+}
+
+h2 { 
+    font-family: var(--font-display);
+    color: var(--green); 
+}
+
+p  { font-size: 15px; }
+
+img { max-width: 100%; }
+a   { color: var(--green); }
+ 
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    font-family: var(--font-display);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--cream);
+    background-color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+}
+.btn:hover, .btn:focus-visible { background-color: var(--cream); color: var(--green); }
+
+/* ==========================================================
+   HEADER, NAV, FOOTER
+   ========================================================== */
+   
+.site-header { display: flex; justify-content: space-between; }
+ 
+.logo img { width: var(--icon); height: var(--icon); display: block; }
+ 
+.site-header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+.site-header nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+.site-header nav img  { width: var(--icon); height: var(--icon); display: block; }
+.site-header nav span { margin: -5px 0 15px; }
+ 
+.site-header nav a:hover,
+.site-header nav a:focus-visible { color: var(--brown); filter: drop-shadow(4px 4px 5px var(--shadow-light)); }
+.site-header nav a[aria-current="page"] { color: var(--green); }
+ 
+.site-footer { padding: 1rem; font-size: 15px; }
+
+/* ==========================================================
+   HOME PAGE: HERO
+   ========================================================== */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;  
+                    
+    gap: 1rem 50px;
+    margin-top: 1rem;
+}
+.hero-img  { width: clamp(160px, 45vw, 250px); height: auto; aspect-ratio: 1; filter: drop-shadow(4px 4px 5px var(--shadow-light)); }
+.hero-text { flex: 1 1 320px; max-width: 460px; text-align: left; }
+
+/* ==========================================================
+   HOME PAGE: DIRECTORY
+   ========================================================== */
+
+.directory h2 { font-size: clamp(28px, 6vw, 35px); color: var(--brown); }
+ 
+.dir-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dir-grid li { flex: 0 0 auto; }
+.dir-card { min-width: 200px; }
+
+.dir-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.dir-card img { width: clamp(120px, 30vw, 200px); height: auto; aspect-ratio: 1; display: block; margin-bottom: -10px; }
+.dir-card:hover, .dir-card:focus-visible { filter: drop-shadow(4px 4px 5px var(--shadow-mid)); }
+ 
+.hovertext { display: block; margin: 15px 0; font-size: 15px; color: var(--brown); opacity: 0; }
+.dir-card:hover .hovertext,
+.dir-card:focus-visible .hovertext { opacity: 1; }
+
+@media (max-width: 400px) {
+    .dir-grid { flex-direction: column; align-items: center; }
+    .dir-grid .dir-card { width: 100%; }
+    .dir-grid .dir-card img { width: min(80vw, 200px); }
+}
+ 
+@media (hover: none) { .hovertext { opacity: 1; } }
+   
