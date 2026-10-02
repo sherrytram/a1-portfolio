@@ -38,7 +38,7 @@ main {
     flex: 1;
     width: 100%;
     padding: 0 max(1rem, calc((100% - 1100px) / 2));
-
+    margin-bottom: 30px;
     background-image: url("img/bg_top.png"), url("img/bg_bottom.png");
     background-size: min(var(--bg-width), calc(100% - 2 * var(--bg-side-space))) auto;
     background-position: center var(--bg-top-offset), center bottom;
@@ -117,7 +117,17 @@ a   { color: var(--green); }
 .site-header nav a:focus-visible { color: var(--brown); filter: drop-shadow(4px 4px 5px var(--shadow-light)); }
 .site-header nav a[aria-current="page"] { color: var(--green); }
  
-.site-footer { padding: 1rem; font-size: 15px; }
+.site-footer { padding: 0.5rem; font-size: 15px; background-color: var(--green); }
+.site-footer p {
+    display: flex;
+    justify-content: center;
+    color: #FAF8F0;
+    align-items: center;
+    gap: 1rem;         
+}
+.site-footer a {
+    color:#FAF8F0;
+}
 
 /* ==========================================================
    HOME PAGE: HERO
