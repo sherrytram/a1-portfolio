@@ -130,7 +130,7 @@ a   { color: var(--green); }
 }
 
 /* ==========================================================
-   HOME PAGE: HERO
+   HOMEPAGE: HERO 
    ========================================================== */
 
 .hero {
@@ -190,3 +190,16 @@ a   { color: var(--green); }
  
 @media (hover: none) { .hovertext { opacity: 1; } }
    
+/* ==========================================================
+   HOMEPAGE: ABOUT 
+   ========================================================== */
+
+.social {
+    display: flex;
+    gap: 1 rem;          
+}
+.social a {
+    width: 40px;        
+    height: 40px;
+    font-size: 25px;    
+}
