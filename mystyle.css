@@ -109,6 +109,7 @@ a   { color: var(--green); }
     text-decoration: none;
     color: #000;
     font-size: 15px;
+    font-weight: 500;
 }
 .site-header nav img  { width: var(--icon); height: var(--icon); display: block; }
 .site-header nav span { margin: -5px 0 15px; }
@@ -191,7 +192,7 @@ a   { color: var(--green); }
 @media (hover: none) { .hovertext { opacity: 1; } }
    
 /* ==========================================================
-   HOMEPAGE: ABOUT 
+   ABOUT: HERO 
    ========================================================== */
 
 .social {
@@ -203,3 +204,26 @@ a   { color: var(--green); }
     height: 40px;
     font-size: 25px;    
 }
+
+/* ==========================================================
+   ABOUT: CURRENTLY INTO
+   ========================================================== */
+
+.interest-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));   /* 3 across on desktop, fewer on narrow screens */
+    gap: 2rem;
+    max-width: 780px;
+    margin: 0 auto 2rem;
+}
+.interest-row figure { margin: 0; }
+.interest-row img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: drop-shadow(4px 4px 5px var(--shadow-dark));
+}
+.interest-row figcaption { margin-top: 0.5rem; font-size: 15px; color: var(--brown); }
+ 
