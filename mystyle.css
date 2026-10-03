@@ -153,8 +153,6 @@ a   { color: var(--green); }
 /* ==========================================================
    HOME PAGE: DIRECTORY
    ========================================================== */
-
-.directory h2 { font-size: clamp(28px, 6vw, 35px); color: var(--brown); }
  
 .dir-grid {
     display: flex;
@@ -196,8 +194,7 @@ a   { color: var(--green); }
    ========================================================== */
 
 .social {
-    display: flex;
-    gap: 1 rem;          
+    display: flex;      
 }
 .social a {
     width: 40px;        
