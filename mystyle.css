@@ -211,7 +211,7 @@ a   { color: var(--green); }
 
 .interest-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));   /* 3 across on desktop, fewer on narrow screens */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 2rem;
     max-width: 780px;
     margin: 0 auto 2rem;
@@ -219,7 +219,7 @@ a   { color: var(--green); }
 .interest-row figure { margin: 0; }
 .interest-row img {
     width: 100%;
-    max-width: 160px;
+    max-width: 150px;
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
