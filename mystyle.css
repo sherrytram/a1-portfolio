@@ -84,7 +84,7 @@ a   { color: var(--green); }
 .btn:hover, .btn:focus-visible { background-color: var(--cream); color: var(--green); }
 
 /* ==========================================================
-   HEADER, NAV, FOOTER
+   HEADER, NAV, FOOTER, SKIP LINK
    ========================================================== */
    
 .site-header { display: flex; justify-content: space-between; }
@@ -130,6 +130,9 @@ a   { color: var(--green); }
     color:#FAF8F0;
 }
 
+.skip-link { position: absolute; left: -999px; }
+.skip-link:focus { left: 1rem; top: 1rem; padding: 0.5rem; background: var(--cream); z-index: 10; }
+
 /* ==========================================================
    HOMEPAGE: HERO 
    ========================================================== */
@@ -166,6 +169,10 @@ a   { color: var(--green); }
 
 .dir-grid li { flex: 0 0 auto; }
 .dir-card { min-width: 200px; }
+
+.directory h2 {
+    margin-top: -0.1rem;       
+}
 
 .dir-card {
     display: flex;
